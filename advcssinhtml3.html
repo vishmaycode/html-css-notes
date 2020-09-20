@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using flxbox</title>
+    <style>
+        .container{
+            height: 500px;
+            width: 100%;
+            border: 2px solid black;
+            display: flex;
+            /* properties for flex containers */
+            
+            /* flex-direction: row; (this is defualt) */
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; (start from left as we write urdu)
+            flex-direction: column-reverse; (start filling from down to top)*/
+
+            /* flex-wrap: nowrap; this is default */
+            /* flex-wrap: wrap-reverse; 2 on top n 4 on down*/
+            /* flex-wrap: wrap; */
+
+            /* flex-flow: row wrap; (this is a shorthand to write direction and wrap in one line)*/
+
+            /* justify-content: center;  justify boxes inside container */
+            /* justify-content: space-between;  keep space between each box evenly (only in between 2 boxes)*/
+            /* justify-content: space-evenly;  keeps space bet 2 boxes and also ends */
+            /* justify-content: space-around;  creates space around each box (like a shield to each box) */
+
+            /* align-items: start; this is default which aligns items at top */
+            /* align-items: center;  this aligns items virtically */
+            /* align-items: flex-end;  this aligns items at end or down of the flex box */
+            /* align-items: stretch; this creates a space bet two items when they are compressed in responsive mode */
+        }
+        .item{
+            width: 120px;
+            height: 120px;
+            background-color: tomato;
+            border: 3px solid blue;
+            margin: 6px;
+            padding: 4px;
+        }
+        /* properties of items in flex boxes */
+        #item1{
+            /*order: 5;  the bigger order will go to the end every box will have a order its same like z-index     order go from small at first to large at end */
+            /* flex-grow: 3;  grows with width of the device bigger the number more it ill grow */
+            /* flex-shrink: 5;  hen shrinking the this item will shrink more then the other bigger the number more shirink*/
+        }
+        #item2{
+            /* order: 2; */
+            /* flex-grow: 2;
+            flex-shrink: 4; */
+
+            /* flex-basis: 200px; when flex-direction is set to row it will control the width just chaqnges for initial time does not keep it fix as it is a responsive design*/
+            /* flex-basis: 200px; when flex-direction is set to column it will control the height */
+        }
+        #item3{
+            flex: 3 3 250px; /* grow shrink basis  this is the short hand for grow shrink and basis in one line*/
+            /* align-self: flex-end; this will move the box to the end and start as u wish */
+            /* align-self: center */
+            /* align-self: start; */
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Heading</h1>
+    <div class="container">
+        <div class="item" id="item1">
+            first item
+        </div>
+        <div class="item" id="item2">
+            second item
+        </div>
+        <div class="item" id="item3">
+            third item
+        </div>
+        <!-- <div class="item" id="item4">
+            forth item
+        </div>
+        <div class="item" id="item5">
+            fifth item
+        </div>
+        <div class="item" id="item6">
+            sixth item
+        </div> -->
+    </div>
+</body>
+</html>

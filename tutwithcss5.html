@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model and padding</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            background-color: rgb(150, 189, 184);
+            border: 3px solid rgb(55, 173, 25);
+            /* padding: 9px;
+            margin: 12px; This way u can assign padding and margin in just one variable for all sides by default*/
+
+            /* padding-left: 20px;
+            margin-top: 30px; this way u can assign padding and margin to just one side by specifing the side and then assigning */
+
+            /* pading: 20px 18px;
+            margin: 20px 18px; this way u can assign padding and margin to top and bottom at once and left and right at once first variable will be top/bottom and second will be right/left */
+
+            padding: 10px 10px 10px 20px; 
+            margin:  10px 10px 10px 14px;/*this way u can assign padding and margin n by just assigning their values in line as top right bottom and left respectively*/
+
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Tis is my heading</h3>
+        <p id="first">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint fugit amet ea, quasi debitis magnam! In maiores culpa inventore molestiae beatae, qui ducimus exercitationem quod possimus, facilis eius hic dolor! Quam blanditiis maiores amet accusamus ducimus, illum optio architecto aliquid, voluptatem exercitationem quas, beatae harum.
+        </p>
+    </div>
+
+    <div class="container">
+        <h3>Tis is my heading</h3>
+        <p id="second">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint fugit amet ea, quasi debitis magnam! In maiores culpa inventore molestiae beatae, qui ducimus exercitationem quod possimus, facilis eius hic dolor! Quam blanditiis maiores amet accusamus ducimus, illum optio architecto aliquid, voluptatem exercitationem quas, beatae harum.
+        </p>
+    </div>
+
+    <div class="container">
+        <h3>Tis is my heading</h3>
+        <p id="third">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint fugit amet ea, quasi debitis magnam! In maiores culpa inventore molestiae beatae, qui ducimus exercitationem quod possimus, facilis eius hic dolor! Quam blanditiis maiores amet accusamus ducimus, illum optio architecto aliquid, voluptatem exercitationem quas, beatae harum.
+        </p>
+    </div>
+</body>
+</html>
