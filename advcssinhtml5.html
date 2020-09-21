@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Qeries</title>
+    <style>
+        .box{
+            font-size: 25px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            display: none;
+        }
+        @media (max-width:480px){
+            #box1{
+                display: block;
+            }
+        }
+        @media (max-width: 1080px) and (min-width: 480px){
+            #box2{
+                display: block;
+                background-color: violet;
+            }
+        }
+        @media (max-width:2160px) and (min-width: 1080px){
+            #box1{
+                display: block;
+                background-color: chartreuse;
+            }
+        }
+        @media only screen and (max-width: 4000px) and (min-width: 2160px){
+            /* only screen and is used to define certain functions of media which can be performed on certain screen sixes maybe ior depending on the screen size to check if it is a mobile device or not it is very helpful and media quaries are a type of if else statment on the css side to set different functionality and look to the css depending on the screen sixe */
+            #box4{
+                display: block;
+                background-color: cyan;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">mein ek iphone hu</div>
+    <div class="box" id="box2">mein ek tablet hu</div>
+    <div class="box" id="box3">mein ek computer hu</div>
+    <div class="box" id="box4">mein ek wide screen computer hu</div>
+</body>
+</html>

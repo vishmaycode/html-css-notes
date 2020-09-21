@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        html{
+            /* used for rem is related to this and pading also wrt this and not fonts */
+            font-size: 12px;
+        }
+        .container{
+            /* viewport height and width */
+            height: 100vh;
+            width: 100vw;
+            border: 3px solid red;
+            font-size: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        #first{
+            /*  this is how em is put togather */
+            /* font-size: 3em; 3 times of the parent i.e container 10px x 3 = 30px
+            padding: 2em;  2 times of the font-sixe i.e 2 x 3 x 10 = 60px */
+        }
+        #second{
+            /* font-size: 3rem; this rem is wrt the html tag and not the container 
+            padding: 3rem;  this is also wrt the html tag and does not depend on the container it is in */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="third">This is third heading</h1>
+    </div>
+</body>
+</html>
