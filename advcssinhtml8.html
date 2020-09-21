@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before and after pseudo selectors</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        header::before{
+            background: url(https://source.unsplash.com/random) no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .navigation{
+            display: flex;
+            font-size: 20px;
+        }
+
+        li{
+            /* list style removes the dot before them */
+            list-style: none;
+            padding: 34px 44px;
+        }
+
+        section{
+            height: 254px;
+            margin: 3px 20px;
+            display: flex;
+            flex-direction: column;
+             /* for alighning  content in horizontal */
+             align-items: center;
+            /* for alighning content in vertical  */
+            justify-content: center;
+        }
+/* 
+        section::after{
+            content: "this is a after content";
+        }
+        
+        section::before{
+            content: "this is a before content";
+        } */
+
+        section h3{
+            font-size: 2rem;
+        }
+        section p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="mavbar">
+            <ul class="navigation">
+                <li class="item" id="item1">Home</li>
+                <li class="item" id="item2">About</li>
+                <li class="item" id="item3">Services</li>
+                <li class="item" id="item4">About Us</li>
+            </ul>
+        </nav>
+        <section>
+            <h3>Welcome to coding world</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aspernatur perferendis iusto doloribus expedita quibusdam vitae recusandae tenetur soluta! Veritatis asperiores enim voluptas fugit itaque, quae esse beatae maxime recusandae voluptate voluptatibus alias est?</p>
+        </section>
+    </header>
+</body>
+</html>
