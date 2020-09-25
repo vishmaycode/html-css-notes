@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css variables/custom properties</title>
+    <style>
+        :root{
+            /* this is like the global variable which can be accesed in entire file */
+            --box-color: silver;
+            --box-border: red;
+            --cont-color: lightgreen;
+            --maxwi: 200px;
+        }
+        .container{
+            background-color: var(--cont-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            /* this are like local variables which can be accesed only in this box */
+            /* --box-color: silver;
+            --box-border: red; */
+            border: 2px solid var(--box-border);
+            margin: 9px 12px;
+            width: var(--maxwi);
+            height: 200px;
+            background-color: var(--box-color);
+            box-shadow: 6px 6px 10px var(--box-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+    </div>
+</body>
+</html>

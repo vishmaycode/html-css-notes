@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animations and keyframes</title>
+    <style>
+        .container{
+            background-color: lightgrey;
+        }
+        .box{
+            position: relative;
+            background-color: lightgreen;
+            width: 50px;
+            height: 50px;
+            /* this sets name to the animation  */
+            animation-name: vishmay1;
+            /* this is the duration of time it will take to perform that animation */
+            animation-duration: 2s;
+            /* animation-iteration-count: 4; */
+            animation-iteration-count: infinite;
+
+            /* this will make it hold its position after performing the animation "forwards" is end state and "alternate" is the start state */
+            /* animation-fill-mode: forwards; */
+
+            /* this will make it fast at first and slow at end */
+            /* animation-timing-function: ease-out; */
+            /* this makes it slow at start and fast at end */
+            /* animation-timing-function: ease-in; */
+            /* ease-in-out will make it slow fast slow */
+
+            /* this will make it start 2 sec late */
+            /* animation-delay: 2s; */
+
+            /* reversis the direction of the animation */
+            /* animation-direction: reverse; */
+
+            /* animation short hand */
+            /* animation: name duration timing-func deley ittertion-count fill-mode; */
+            /* animation: vishmay 5s ease-in 1s 12 backwards; */
+        }
+
+        @keyframes vishmay1 {
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 50px;
+                left: 0px;
+            }
+            50%{
+                top: 50px;
+                left: 50px;
+            }
+            75%{
+                top: 0px;
+                left: 50px;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+            }            
+        }
+
+        @keyframes vishmay{
+            from{
+                width: 0px;
+            }
+            to{
+                width: 1350px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            
+        </div>
+    </div>
+</body>
+</html>

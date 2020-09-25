@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Box shadow and text shadow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .card{
+            background-color: silver;
+            margin: 23px 12px;
+            padding: 32px 12px;
+            /* box-shadow: -10px 10px green;
+             orentation is  x     y    color */
+            /* box-shadow: -10px 10px 15px green; */
+            /* the third parameter is blur radius */
+            box-shadow: -10px 10px 15px 5px rgba(77, 33, 44, 0.5);
+            /* the forth one here is spread radius */
+            /* box-shadow: inset -10px 10px 15px 5px rgba(77, 33, 44, 0.5); */
+            /* inset is used to give shadow from inside */
+            /* box-shadow: -10px 10px 15px 5px red,-20px 10px 15px 5px green; */
+            /* this is how multiple color can be given */
+        }
+
+        /* 
+        this is how the orientation of box shadow is
+            -y
+        -x       x
+             y
+         */
+
+        .card h2{
+            text-shadow: -2px 2px 8px rgba(77, 33, 44, 0.5);
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="card" id="car1">
+            <h2>card1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aliquid accusamus nesciunt, nulla corrupti voluptate non odit dicta officia ipsum unde adipisci consectetur soluta quia molestiae minus aspernatur eveniet dolore. Placeat harum odit dolorem.</p>
+        </div>
+        <div class="card" id="car2">
+            <h2>card2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti explicabo natus culpa cupiditate dolorem quia velit, consequuntur voluptates modi. Eligendi iure quod aut, culpa dolorum dignissimos porro repudiandae iusto, laudantium esse reprehenderit, recusandae nobis.</p>
+        </div>
+        <div class="card" id="car3">
+            <h2>card3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda facere, tempore sit alias soluta obcaecati veniam est ex recusandae perspiciatis ea reprehenderit enim optio numquam id? Eveniet voluptas quaerat quasi libero dolore eum nesciunt!</p>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transitions</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #box{
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(73, 44, 151);
+            margin: auto;
+            
+            /* this is used to specify which property u wanna add transmission to */
+            /* transition-property: background-color; */
+            
+            /* this sets the duration it will take to complete transmission */
+            /* transition-duration: 1s; */
+            
+            /* just like animations ease in will slower at start n faster at end */
+            /* transition-timing-function: ease-in; */
+            
+            /* same like animations transitions aslo has delay which specifies how late to start transmition */
+            /* transition-delay: 2s; */
+            
+            /* shorthand for transision */
+            /* transition: property  duration  timing-func delay*/
+            /* can also write all at property to change all properties  */
+            transition: all 1s ease-in-out 0.5s;
+        }
+
+        #box:hover{
+            background-color: skyblue;
+            height: 400px;
+            width: 400px;
+            color: black;
+            border-radius: 25px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h3>This is css transition tutorial</h3>
+    <div class="container">
+        <div id="box">
+            this is my box
+        </div>
+    </div>
+</body>
+</html>
