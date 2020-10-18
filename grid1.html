@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>grid intro</title>
+    <title>grid intro rows and columns</title>
     <style>
         .container{
             display: grid;
@@ -19,18 +19,23 @@
             /* grid-template-columns: 1fr 4fr 1fr; */
             
             /* same as giving 10 parameters as auto */
-            grid-template-columns: repeat(5, auto);
+            grid-template-columns: 2fr 4fr 4fr 1fr;
 
             /* sets gap bet 2 grid items like margin */
             grid-gap: 1rem;
+
+            /* all same attributes apply to rows as columns */
+            /* same as grid tamplate colums */
+            grid-template-rows: 1fr 4fr;
+
+            /* this is used to assign row length for remaining unassigned rows */
+            grid-auto-rows: 2fr;
         }
 
         .item{
             /* height: 50px;
             width: 50px; */
             background-color: blueviolet;
-            padding: 30px;
-            margin: 3px;
             border: 2px solid black;
         }
     </style>
