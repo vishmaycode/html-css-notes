@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layouts and templte area</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
+        }
+        .item{
+            border: 2px solid black;
+            background-color: rgb(172, 186, 201);
+        }
+        #navbar{
+            grid-area: navbar;
+        }
+        #section{  
+            grid-area: section;
+        }
+        #aside{
+            grid-area: aside;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="navbar" class="item">
+            Home About ContectUs Services
+        </div>
+        <div id="section" class="item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At fugit doloremque ab nemo ipsam quisquam porro corrupti explicabo harum voluptatem labore, nihil quaerat!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium iusto molestiae quis eum amet, suscipit, ducimus sint exercitationem iste minima cupiditate consequuntur quia dolorem natus voluptatum sequi rem minus beatae. Velit ea blanditiis, ipsa inventore illum asperiores magnam quas non harum, beatae qui dicta quae temporibus ducimus veniam voluptates tempore recusandae reiciendis quod omnis unde facilis quibusdam placeat incidunt. Ipsa aliquam laboriosam molestias impedit itaque quasi earum voluptates. Ad porro odio ratione excepturi sint velit reiciendis ducimus consectetur aliquid vero nisi placeat quaerat dignissimos illum corporis esse nulla pariatur, quam aut recusandae. Rem, harum illo quasi ab doloremque expedita eum delectus labore amet officiis provident nobis alias nihil optio officia illum blanditiis quae accusamus distinctio modi incidunt. Quidem quos facilis corrupti quo atque. Expedita exercitationem quia vitae impedit nam quidem molestiae necessitatibus inventore nulla. Odio sit doloremque, harum, autem saepe repudiandae beatae ipsa aut a illum velit sapiente. Illum accusantium quod enim earum veritatis, dolores, quasi officia sequi esse nostrum rerum provident quaerat saepe eaque error quidem voluptatibus! Eveniet, qui pariatur doloremque molestias corrupti nobis nam itaque consectetur, doloribus corporis cum temporibus porro in ad ea explicabo voluptas nesciunt veniam ipsam consequatur beatae commodi consequuntur sit. Cum, asperiores fugit. Tempore?
+        </div>
+        <div id="aside" class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium cum asperiores vero.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit reiciendis dolorum, tempora ex temporibus tempore porro eius nisi. Molestias, amet. Laudantium numquam saepe est facilis, quidem id a unde aliquam doloribus sed commodi perspiciatis magnam rem natus impedit ducimus in voluptates expedita, hic dolorum dolorem illum! Distinctio et, temporibus repudiandae culpa quisquam illo odit sunt voluptatibus molestias qui totam incidunt eos dolor? Nostrum assumenda provident praesentium id blanditiis a deleniti dolor dignissimos sed architecto tempore esse minima deserunt accusamus fugiat nihil suscipit rerum rem, reprehenderit quas repudiandae quibusdam illum totam iure. Itaque numquam dolore dolor ratione dolores natus cumque maiores minus earum, iste repellat praesentium iure aut impedit delectus! Soluta ipsum inventore beatae ea sit illum dolores, perferendis eligendi molestiae temporibus facere ab consequuntur? Explicabo ad quibusdam dicta deserunt, nihil eius, magni accusantium maiores repellendus, repudiandae a quis reprehenderit unde iure. Id debitis neque veniam deleniti, ea mollitia saepe? Commodi.
+        </div>
+        <!-- <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+        <div class="item">item9</div>
+        <div class="item">item10</div>
+        <div class="item">item11</div>
+        <div class="item">item12</div>
+        <div class="item">item13</div>
+        <div class="item">item14</div> -->
+        <footer>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </footer>
+    </div>    
+</body>
+</html>

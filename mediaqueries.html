@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Qeries</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
+        }
+
+        @media (max-width:480px) {
+            body{
+               background-color: cyan;
+           }
+           .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar'
+            'section section section'
+            'aside aside aside'
+            'footer footer footer';
+        }
+        }
+
+        @media (max-width: 1080px) and (min-width: 480px) {
+            body{
+               background-color: orange;
+           }
+        }
+
+        @media (max-width:4000px) and (min-width: 1080px) {
+            body{
+               background-color: greenyellow;
+           }
+
+        }
+
+        .border-now{
+            border: 3px double black;
+            padding: 10px;
+            margin: 5px;
+            background-color: cadetblue;
+        }
+
+        nav{
+            grid-area: navbar;
+        }
+        aside{
+            grid-area: aside;
+        }
+        section{
+            grid-area: section;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="border-now">
+            <h3>Home About Contect</h3>
+        </nav>
+        <section class="border-now">
+            <h2>Learn css in hindi</h2>
+        </section>
+        <aside class="border-now">
+            <h1>More about us</h1>
+        </aside>
+    </div>
+    <footer>
+        copyright  huh what?
+    </footer>
+</body>
+</html>
