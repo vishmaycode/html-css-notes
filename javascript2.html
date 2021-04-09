@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript strings</title>
+</head>
+<body>
+    <div class="container" id="content">
+        <h1>Lorem ipsum dolor sit amet consectetur</h1>
+         <p>adipisicing elit. Amet tempore repellendus dolores nulla nesciunt minus perspiciatis pariatur ut sed omnis, facere impedit libero odit officia ratione? Cum reprehenderit sint voluptas et, doloremque itaque. Mollitia temporibus unde alias nam facere? Doloribus sint ea tenetur nisi est.</p>
+    </div>
+    <script>
+        var string = "this"; // double quotes and single quotes are the same
+        // 'thi"s' "thi's" this will show the middle quote without error
+        // 'thi's' "thi"s" this willl give error
+        var name = 'vishmay';
+        var into = "hey";
+        console.log(string);
+        console.log(string + name + into);
+
+        var temp = `${name} is a 'nice' person and "he" says ${into}`;
+        console.log(temp);
+
+        var len = name.length;
+        console.log(`length of name is ${len}`);
+
+        // another way of making string by constructor but not to be used much
+        var y = new String("this");
+        console.log(y);
+
+        document.getElementById('content').innerHTML = '<h3> this is an h3 heading</h3>';
+
+    </script>
+</body>
+</html>
