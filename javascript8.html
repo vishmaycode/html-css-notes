@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        loops for while forEach dowhile
+    </title>
+</head>
+<body>
+    <div>this is about loops</div>
+    <script>
+        let i = 0;
+        let friends = ["satyam","aryan","virendra","rahul","prathmesh"];
+        let emp = {
+            name : "vishmay",
+            salary : 2,
+            surname : "karbotkar"
+        };
+
+        // for loop
+        for(i=0; i<8; i++){         // normal number
+            console.log(i);
+        }
+        for (let index = 0; index < friends.length; index++) {      // normal array
+            console.log("hello " + friends[index]);
+        }
+        friends.forEach(function f(element){                    // modern js for array (forEach)
+            console.log("hello " + element);
+        });
+        for (element of friends){                               // modern js    (for(of))
+            console.log("hello " + element);
+        }
+        for (key in emp){                                           // used in objects (for(in))
+            console.log(`the ${key} of employee is ${emp[key]}`);
+        }
+
+        // while loop
+        i=0;
+        while(i<7){                         // normal numbers
+            console.log(i);
+            i++;
+        }
+        i=0;
+        while(i<friends.length){            // array
+            console.log(friends[i]);
+            i++;
+        }
+
+        // do while
+        i=0;
+        do{
+            console.log(`${i} is less then 8`);
+            i++;
+        }while(i<8);
+    </script>
+</body>
+</html>

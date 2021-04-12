@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript string methods</title>
+    <title>javascript string functions</title>
 </head>
 <body>
     
+    <script>
+        var str = "this is a string";
+        console.log(str);
+
+        // first occurence of substring(word)
+        var pos = str.indexOf('is');
+        console.log(pos);
+        // last occurence of substring
+        pos = str.lastIndexOf('is');
+        console.log(pos);
+        
+        // substring from a string // slice function prints 1 and doesnt print 7
+        var substr = str.slice(1,7);    //can take -ve values 
+        var substr1 = str.substring(1,7);    // cannot take -ve values
+        var substr2 = str.substr(6,3);      //1sr parameter is pos 2nd is length eg 6-7-8
+        console.log(substr);
+        console.log(substr1);
+        console.log(substr2);
+
+        // replace words
+        var rep = str.replace('string','vishmay');
+        console.log(str);
+        console.log(rep);
+
+        // upper case lower case
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        // concatination
+        var news = str.concat(' newstring');
+        console.log(news);
+
+        //remove white spaces from front and end
+        var white = "          this contains  many   white   spaces       ";
+        console.log(white);
+        console.log(white.trim());
+
+        // extracting charactors from a string
+        var char1 = str.charAt(8);
+        var char2 = str.charCodeAt(8);      //gets ASCII code
+        console.log(char1);
+        console.log(char2);
+
+        //slicing in console.log()
+        console.log(str[3]);
+    </script>
 </body>
 </html>

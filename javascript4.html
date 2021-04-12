@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else / scope / switch case</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>item-1</li>
+            <li>item-2</li>
+            <li>item-3</li>
+            <li>item-4</li>
+            <li>item-5</li>
+            <li>item-6</li>
+            <li>item-7</li>
+        </ul>
+    </div>
+    <script>
+        var string1 = "this is a string";       // global scope
+        var string1 = "this is a string2";     // this will not throw error after using same name also
+        console.log(string1);
+
+    //  let a = "s";         // global level scope
+        let a = "u";            // this will throw error as only one can be diclared global
+        {
+            let a = 'u3';       // block level scope
+            console.log(a);
+        }
+        console.log(a);
+
+        // constant
+        const b = "this cannot be changed";
+        // b = "i wanna change this";
+        console.log(b);
+
+        // if else if
+        let age = 5;
+        if(age>18){
+            console.log("you can drink cold drink");
+        } else if(age==14) {
+            console.log('you can drink juice');
+        } else {
+            console.log("you can drink water");
+        }
+        
+        // switch
+        let x = 2;
+        switch (x) {
+            case 4:
+                console.log("value is 4");
+                break;
+            case 3:
+                console.log("value is 3");
+                break;
+            case 2:
+                console.log("value is 2");
+                break;
+            case 1:
+                console.log("value is 1");
+                break;
+            default:
+                sconsole.log("the value of x is not 4 3 2 1");
+                break;
+        }
+
+    </script>
+</body>
+</html>

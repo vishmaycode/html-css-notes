@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays and objects</title>
+</head>
+<body>
+    <div class="container">
+        simple html
+    </div>
+    <script>
+        // primitives and objects
+        //primitives
+        // types of var
+        let myvar = 34;
+        let myvar1 = 'string';
+        let myvar2 = true;
+        let myvar3 = null;
+        let myvar4 = undefined; // same as let myvar;
+
+        // objects
+        let emp = {
+            name:"vishmay",
+            salary:2000,
+            surname:"karbotkar",
+            "sur name" : "karbotkar"        // not generally used but if have to then pur ""
+        };
+        console.log(emp);
+        console.log(emp.name);
+        console.log(emp['salary']);
+        console.log(emp['sur name']);   // to be used when key has space in it
+        
+        // arrrys - special type of object
+        let zack = [1,2,3,4,"hello",undefined,null];
+        console.log(zack);
+        console.log(zack[2]);
+
+        let zack1 = new Array(1,"hello",undefined,null,2,3,4);
+        console.log(zack1);
+        console.log(zack1[5]);
+        console.log(zack1.length);
+
+        zack1 = zack1.sort();
+        console.log(zack1);
+
+        zack1.push("new");
+        console.log(zack1);
+
+        // creating array of undefined empty elements
+        let any = new Array(20);
+        console.log(any);
+        console.log(any[15]);
+    </script>
+</body>
+</html>
