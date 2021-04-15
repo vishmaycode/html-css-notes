@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions</title>
+</head>
+<body>
+    <div class="container">
+        this is arrow function tutorial
+    </div>
+    <script>
+        // normal function
+        function greet(){
+            console.log('good morning');
+        }
+        greet();
+
+        // // arrow function  <--works both ways for one line and multiple line-->
+        // let greet1 = () => {
+        //     console.log("good night");
+        // }
+        let greet1 = () => console.log("good night");
+        greet1();
+
+        // used in settimeout
+        setTimeout(() => {
+            console.log('we are inside setTimeout');
+        }, 3000);
+
+        // normal arrow func
+        let sum = (a,b) => {
+            return a+b;
+        }
+        console.log(sum(2,5));
+
+        // still shorter
+        let sum2 = (a,b) => a+b;
+        console.log(sum2(4,5));
+
+        // using one parameter no use of brackets also
+        let half = a => a/2;
+        console.log(half(4));
+
+        // ==> laxical this 
+        
+        // using objects and forEach 
+        // let obj1 = {
+        //     greeting : "good morning",
+        //     names : ["vishmay", "satyam", "virendra", "rahul"],
+        //     speak(){
+        //         this.names.forEach(function s (student) {
+        //             console.log(this.greeting + " anything " + student);
+        //         });
+        //     }
+        // }
+        // if function was used then the  this.greeting would have returned undefined as it is inside the function and there is not reference of outside this to inside this
+        // but in bwlow case we used this with arrow function and it returned greeting as it was refering to above outside function object
+        let obj1 = {
+            greeting : "good morning",
+            names : ["vishmay", "satyam", "virendra", "rahul"],
+            speak(){
+                this.names.forEach((student) => {
+                    console.log(this.greeting + " anything " + student);
+                });
+            }
+        }
+        obj1.speak();
+    </script>
+</body>
+</html>

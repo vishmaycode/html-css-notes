@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM - document object module</title>
+    <style>
+        .container{
+            background-color: blanchedalmond;
+        }
+        #nav{
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
-    <div id="first" class="container">
+    <div class="container" id="first">
         <ul id="nav">
             <li>Home</li>
             <li>About</li>
@@ -15,12 +23,39 @@
             <li>Contect Us</li>
         </ul>
     </div>
+    <div class="container">
+        this is another container
+    </div>
+
     <script>
-        let fi = document.getElementById('first');
-        console.log(fi);
-        let na = document.getElementById('nav');
-        // console.log(na);
+        // by id
+        let first = document.getElementById('first');       // getting html of first id
+        console.log(first);
         
+        let nav = document.getElementById('nav');
+        console.log(nav);
+        console.log(nav.innerHTML);      // returns inner html as string
+       // nav.innerHTML = "<li>Dynamic Element</li>";     // changing inner html of nav id
+
+        // by class
+        let containers = document.getElementsByClassName('container');      // multiple classes
+        console.log(containers);                                        // returnes collection of classes
+        console.log(containers[0]);                                     // first class from collection
+
+        // by css
+        let sel = document.querySelector('.container');
+        console.log("selector returns ", sel);
+        let sel2 = document.querySelector('#nav');
+        console.log("selector returns ", sel2);
+
+        let sel3 = document.querySelectorAll('#nav>li');
+        console.log("selector returns ", sel3);
+        sel3[0].innerHTML = "inserted html";        // editing css and inner html code 
+
+        // tag name
+
+        // name
+
     </script>
 </body>
 </html>

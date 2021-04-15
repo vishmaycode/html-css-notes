@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cleartimeout and settimeout and setinterval</title>
+</head>
+<body>
+    <div id="first">
+        this is a container
+    </div>
+    <span id="time"></span>
+
+    <script>
+        console.log("this is a tutorial");
+        // setTimeout      // allowes us to run the function once after the interval of time
+        // clearTimeout    // allowes us to run the function repeatadly after the interval of time
+
+        let name = 'vishmay';
+        let bye = 'take care'
+
+        // default parameter(can also be left empty)
+        function greet(name="default",bye="default"){                   
+            console.log("hello good morning " + name + " " + bye);          
+        }
+
+        // setTimeout(greet,5000);                     // without parameter of name
+        // setTimeout(greet,5000,name,bye)       //no paranthesis  // with parameter name
+
+        a = setTimeout(greet,5000);                     
+        b = setTimeout(greet,5000,name,bye)       
+
+        // can also be wwritten as
+        // setTimeout((greet) => {
+        //     console.log("hello good morning");
+        // }, 5000);
+
+
+        // clear timeout
+
+        console.log(a);             // gets id of the timeout assigned to a
+        console.log(b);             // gets id of the timeout assigned to b
+
+        clearTimeout(a);            // can be used as id or also the variable // clearTimeout(4);
+        clearTimeout(b);
+
+
+        // set interval     and     clear interval
+        intervalid = setInterval(greet, 1000, name, bye);
+        clearInterval(intervalid);
+
+        function distime(){
+            time = new Date();
+            // console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+
+        setInterval(distime, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events and listning to events</title>
+</head>
+<style>
+    #btn{
+        padding: 10px;
+        border: 2px solid red;
+        background-color: chartreuse;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <!-- browser events:
+
+    click           // left click
+    context menu    // right click
+    mouseover       // when cursor is over the block
+    mouseout        // when cursor is not on the block
+    mousedown
+    mouseup
+    mousemove
+
+    submit
+    focus
+
+    DOMContentLoaded
+
+    transitionend 
+    -->
+    
+    <div>
+        <h1>this is heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione nihil doloremque natus ex harum eius, voluptas iure neque perspiciatis, libero quas optio, impedit deserunt consectetur! Assumenda repellat itaque quis facilis natus repudiandae ex voluptatem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, vero voluptas voluptate, unde quisquam autem fugiat aspernatur in, libero magni incidunt? Nulla quaerat magnam, consectetur fugiat error rerum blanditiis eius.
+        </p>
+    </div>
+    <button id="btn" onclick="toggleHide()">show/hide</button>
+
+    <script>
+        let para = document.getElementById('para');
+        para.addEventListener('mouseover', function run(){      //event listner to check mouse pos
+            alert('mouse inside');
+        });
+
+        para.addEventListener('mouseout', function run(){        
+            alert('mouse outside');
+        });
+
+
+        function toggleHide(){
+            let btn = document.getElementById('btn');               // used to get the id
+            let para = document.getElementById('para');
+
+            if(para.style.display != 'none'){
+                para.style.display = 'none';                // to hide data
+            } else {
+                para.style.display = 'block';               // to display the data
+            }
+        }
+    </script>
+</body>
+</html>

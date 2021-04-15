@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date and time</title>
+</head>
+<body>
+    <div id="date"></div>
+    <script>
+        let dt = new Date();           // object to the date
+        console.log(dt);               // prints date/time in international format
+
+        let dt1 = new Date(0);           // initial time which is the refrence used as standard
+        let dt2 = new Date(10);          // 10 mili seconds after the refrence used
+
+        let newdate = new Date("2020-09-30");   // print this date in standard format
+        console.log(newdate);
+
+        // let newdate2 = new Date(year, month, date, hours, minutes, seconds, miliseconds) // format
+        let newdate2 = new Date(3020, 4, 6, 9, 3, 2, 34);
+        console.log(newdate2);
+        
+        // getting individial values
+        let yr = newdate.getFullYear();
+        console.log(yr);
+        let mn = newdate.getMonth();
+        console.log(mn);
+        let dt3 = newdate.getDate();
+        console.log(dt3);
+        let dy = newdate.getDay();
+        console.log(dy);
+        let hr = newdate.getHours();    // getMinutes getSeconds getMiliseconds
+        console.log(hr);                // getUTCMinutes getUTCseconds getUTCmiliseconds & rest too
+
+
+        newdate.setDate(5);         // setFullYear setminutes setUTCHours setUTCseconds
+        console.log(newdate);
+        
+        console.log(Date.now());        // returnes timestamp // miliseconds spend after reference time
+                                        // mostly used to get difference of time bet two events
+    </script>
+</body>
+</html>
