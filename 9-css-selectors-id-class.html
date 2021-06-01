@@ -29,9 +29,43 @@
             color: crimson;
             background-color: pink;
         }
+
+
+        /* more on selectors */
+        /* h1{
+            background-color: chartreuse;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+         } */
+         /*
+        div p{
+            applyes this if p comes in div even if the p is not direct child of the div
+            color: yellow;
+            background-color: yellowgreen;
+        } */
+        /* div > p{
+             applyes this only if the p is direct child of div 
+            color: yellow;
+            background-color: yellowgreen;
+        } */
+        /* div li p{
+             applies to only the p inside li inside a div specifically and not to other li in div or another p in div 
+            color: red;
+            background-color: blue;
+        } */
+/* 
+        div + p{
+            applyes to all those p whos previous sibling is a div
+            i.e div and p are related to a same parent and are having a order of div after p
+            color: yellow;
+            background-color: yellowgreen;
+        }
+        */
     </style>
 </head>
 <body>
+    <p>this is the outermost paragraph</p>
     <h1>CSS Selectors</h1>
     <p>THis is a simple paragraph to demonstrate  CSS selectors</p>
     <p id="secondp">THis is a simple paragraph to demonstrate  CSS selectors</p>
@@ -45,5 +79,19 @@
     <p class="bgskyblue colgreen">THis is a simple paragraph to demonstrate  CSS selectors</p>
     <span>This is span</span>
     <footer>This is footer</footer>
+
+    <!-- more on selectors -->
+
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li><p>this is another paragraph</p></li>
+                <li>this will not get affected</li>
+            </ul>
+            <p>this is a paragraph</p>
+        </div>
+        <p>this is the another paragraph</p>
+    </div>
 </body>
 </html>
