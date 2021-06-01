@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+</head>
+<body>
+    <div class="container">json</div>
+    <script>
+        // json object is obj and its info
+        let obj = {
+            name : "vishmay",
+            surname : "karbotkar",
+            age : 21,
+            food : "crispy"
+        }
+        console.log(obj);
+
+        // converting to string
+        let mystr = JSON.stringify(obj);
+        console.log(mystr);
+
+        // replacing one attribute of json /string
+        mystr = mystr.replace('vishmay','vishu');
+        console.log(mystr);
+
+        // converting to obj
+        let newobj = JSON.parse(mystr);
+        console.log(newobj);
+    </script>
+</body>
+</html>

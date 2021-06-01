@@ -21,6 +21,33 @@
         console.log("the value of math const log10 is ", Math.LN10);
         console.log("the value of math const sqrt1/2 is ", Math.SQRT1_2);
         console.log("the value of math const sqrt2 is ", Math.SQRT2);
+
+        // math functions
+        let a1 = 34.64;
+        let b1 = 89;
+        console.log("the value of a and be is ",a1 ,b1);
+        console.log("the value of a and be is ",Math.round(a1) ,b1);      // round figure to integer
+        console.log('2 to the power 7 is ' , Math.pow(2,7));            // a to the power of b 2^7
+        console.log('sqrt of 36 is ', Math.sqrt(50));   // can also be made of non sqrt numbers /50
+        console.log("ciel function", Math.ceil(5.8));   // rounded up to 6
+        console.log("ciel function", Math.floor(5));   // rounded down to 5
+        console.log('absoulte value of 5.6 is ', Math.abs(5.66), Math.abs(-5.66));  // absolute values
+
+        //trignometric values       // takes values on radians and not degrees
+        console.log("the values of sin(pi) is ", Math.sin((Math.PI)));   // sin cos tan cot
+        
+        // max min 
+        console.log("minimum value of 4,5,6 is ", Math.min(4,5,6));     //same with max(2,4,1)
+
+        // log
+
+        // random       returns random between 0 and 1
+        console.log("random ", Math.random());  
+        console.log('0 to 100 ', Math.round(100*Math.random())); 
+        let a = 5;
+        let b = 30;       
+        // if range then formula is (a + (b-a)*Math.random());
+        console.log('0 to 100 ', Math.round(a + (b-a)*Math.random()));
     </script>
 </body>
 </html>
